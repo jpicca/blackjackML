@@ -127,24 +127,6 @@ def take_bet(bet_amount, player_money):
         return "Invalid bet amount"
 
 
-def success_rate(card, obj_h):
-    """ Calculate Success rate of 'HIT' new cards """
-
-    rate = 0
-    diff = 21 - obj_h.value
-    if diff != 0:
-        rate = (VALUES[card[0][1]] / diff) * 100
-
-    if rate < 100:
-        print(f"[ WIN(hit) : {int(rate)}% | LOSS(hit) : {100-int(rate)}% ]")
-    elif rate > 100:
-        l_rate = int(rate - (rate - 99))  # Round to 99
-        if card[0][1] == "Ace":
-            l_rate -= 99
-        print(f"[ WIN(hit) : {100-l_rate}% | LOSS(hit) : {l_rate}% ]")
-    else:
-        print(f"[ GOLD IN YOUR HAND!!!!]")
-
 
 def hits(obj_de):
     new_card = [obj_de.deal_cards()[0][0]]
@@ -155,7 +137,6 @@ def hits(obj_de):
 def blackj_options(p_chips, obj_de, obj_h, dealer_card):
     global PLAYING
     next_card = hits(obj_de)
-    success_rate(next_card, obj_h)
     choice = str(input(f"[ HIT | STAND | SURRENDER | DOUBLE ] : ")).lower()
     print("\n")
     if choice == "hit":
@@ -246,46 +227,9 @@ def clear_screen():
     system("cls" if name == "nt" else "clear")
 
 
-def greet():
-    print(" " + "".center(40, "_"), "|" + "".center(40, " ") + "|", sep="\n")
-    print(
-        "|" + "HaNd Of BLaCk_JaCk".center(40, " ") + "|",
-        "|" + "".center(40, "_") + "|",
-        sep="\n",
-    )
-
-
-def greet2(p_count, d_count, draw_c):
-    print(" " + "".center(30, "_"))
-    print(
-        "|" + "__PLAYER__".ljust(7, " ") + "|",
-        "_DEALER__".center(7, " ") + "|",
-        "_DRAW__".rjust(7, " ") + "|",
-        sep="_",
-    )
-    print(
-        "|"
-        + "".center(10, " ")
-        + "|"
-        + "".center(10, " ")
-        + "|"
-        + "".center(8, " ")
-        + "|"
-    )
-    print(
-        "|"
-        + p_count.center(10, "_")
-        + "|"
-        + d_count.center(10, "_")
-        + "|"
-        + draw_c.center(8, "_")
-        + "|"
-    )
-
-
 def main():
     p_win, d_win, draw = 0, 0, 0
-    greet()
+    print("To play blackjack enter a bet amount!")
     p_chips = Chips()
     while True:
         cards_deck = Deck()
@@ -304,7 +248,7 @@ def main():
             blackj_options(p_chips, cards_deck, p_hand, d_cards)
             if player_bust(p_hand, p_chips):
                 d_win += 1
-                print("\n -- PLAYER --> BUUUSSTTT")
+                print("\n -- PLAYER --> BUST")
                 break
 
         PLAYING = True
@@ -317,7 +261,7 @@ def main():
                 d_hand.add_cards(d_card)
                 if dealer_bust(d_hand, p_hand, p_chips):
                     p_win += 1
-                    print("\n -- DEALER --> BUUUSSTTT\n")
+                    print("\n -- DEALER --> BUST\n")
                     break
             show_all(p_hand.cards, d_hand.cards, p_hand, d_hand)
 
@@ -339,10 +283,11 @@ def main():
         ans = str(input(" Play again(YES/NO) : ")).lower()
         if ans != "yes" or p_chips.total < 1:
             if p_chips.total < 1:
-                print(" NO MORE MONEY !!! ")
+                print(" Oops, you are out of money.... leave. ")
+            else:
+                print(" Thanks for your business! ")
             break
         clear_screen()
-        greet2(str(p_win), str(d_win), str(draw))  # Score board location -> Top
         print("\n" + " ".ljust(30, "-"))
 
 
