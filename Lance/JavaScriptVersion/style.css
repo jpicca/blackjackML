@@ -1,0 +1,89 @@
+/* Style sheet for Blackjack JS game */
+
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 20px Georgia;
+	color: darkgreen;
+	margin: 20px auto;
+	text-align: center;
+}
+
+header {
+	padding: 10px;
+	margin: 10px;
+	border-bottom: solid 2px grey;
+}
+
+.table {
+	width: 700px;
+	margin: 0 auto;
+	padding: 10px;
+
+	color: white;
+	font-size: .8em;
+	background-color: green;
+
+	border-radius: 10px;
+}
+
+.table#dealer {
+	height: 150px;
+	text-align: left;
+}
+
+.table#player {
+	height: 150px;
+	text-align: right;
+}
+
+/* 3D Buttons using shadows and transitions */
+input[type=button]{
+	height: 50px;
+	width: 200px;
+	margin: 10px;
+
+	background-color: lightGreen;
+	box-shadow: 2px 3px 1px green; 
+	border-radius: 10px;
+	border: solid 2px green;
+
+	font-size: 18px;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	transition: all 1s ease;
+}
+
+/* button hovering */
+input[type=button]:enabled:hover {
+	border: solid 3px green;
+}
+
+/* button pressing */
+input[type=button]:enabled:active {
+	box-shadow: 1px 1px 1px green;
+	font-size: 20px; 
+	color: green;
+	top: 5px;
+}
+/* button focus */
+input[type=button]:focus {
+	outline: none;
+}
+/* disabled buttons */
+input[type=button]:disabled {
+	cursor: default;
+	opacity: 0.4;
+}
+
+/* Score areas */
+input[type=text] {
+	font-size: 20px;
+	text-align: center;
+	width: 30px;
+}
