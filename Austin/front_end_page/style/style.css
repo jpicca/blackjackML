@@ -100,8 +100,15 @@ color: #563d7c;
 .fa-cloud:hover {
   color: #d5d5d5;
 }
+.fa-braille {
+  color: #0ACFEA ;
+}
+.fa-braille:hover {
+  color: #EA810A;
+}
 
-.fa-python, .fa-bootstrap, .fa-html5, .fa-css3-alt, .fa-cloud {
+
+.fa-python, .fa-bootstrap, .fa-html5, .fa-css3-alt, .fa-cloud, .fa-braille {
   font-size: 4em; 
   margin: 1rem;
 }
@@ -177,7 +184,7 @@ figure {
   height: 100%;
 }
 #fixed {
-  background-image: url('../img/mac.png');
+  background-image: url('../img/smu1.jpg');
   position: fixed;
   display: block;
   top: 0;
