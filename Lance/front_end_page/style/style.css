@@ -9,6 +9,7 @@ html, body {
 
 .navbar {
   padding: .8rem;
+  background-color: darkgreen;
 }
 
 .navbar-nav li {
@@ -34,10 +35,25 @@ html, body {
   transform: translateY(-50%);
 }
 
-.btn-primary {
-  background-color: #6648b1;
-  border: 1px solid #563d7c;
+.btn-outline-secondary:hover {
+  background-color: darkgreen;
+  border: 1px solid darkgreen;
 }
+
+.btn-lg:hover {
+  background-color:darkgreen ;
+  border: 1px solid darkgreen;
+}
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0;
+}
+.padding{
+  padding-bottom: 2rem; 
+}
+
+
 
 
 
