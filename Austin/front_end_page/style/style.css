@@ -116,7 +116,7 @@ color: #563d7c;
 .card-img-top {
   max-width:50%;
   height:50%;
-  align-content: center;
+  border-radius: 50%;
 }
 
 footer {
