@@ -86,6 +86,10 @@ color: #563d7c;
   margin: 1rem;
 }
 
+.card-img-top {
+  border-radius:50%;
+}
+
 
 
 
