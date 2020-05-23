@@ -9,7 +9,7 @@ html, body {
 
 .navbar {
   padding: .8rem;
-  background-color: #246D24;
+  background-color: #8aa6a2;
 }
 
 .navbar-nav li {
@@ -36,13 +36,13 @@ html, body {
 }
 
 .btn-outline-secondary:hover {
-  background-color: #246D24;
-  border: 1px solid #246D24;
+  background-color: #8aa6a2;
+  border: 1px solid #8aa6a2;
 }
 
 .btn-lg:hover {
-  background-color:#246D24 ;
-  border: 1px solid #246D24;
+  background-color:#8aa6a2 ;
+  border: 1px solid #8aa6a2;
 }
 
 .jumbotron {
@@ -135,7 +135,7 @@ color: #563d7c;
 }
 
 footer {
-  background-color: #246D24; 
+  background-color: #8aa6a2; 
   color: white;
   padding-top: 2rem;
 }
