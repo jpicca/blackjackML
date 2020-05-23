@@ -107,9 +107,24 @@ color: #563d7c;
   color: #EA810A;
 }
 
+.fa-js-square {
+  color: darkgoldenrod;
+}
+.fa-js-square:hover {
+  color:black ;
+}
 
-.fa-python, .fa-bootstrap, .fa-html5, .fa-css3-alt, .fa-cloud, .fa-braille {
-  font-size: 4em; 
+.fa-github-alt {
+  color: black;
+}
+
+.fa-github-alt:hover {
+  color: #d5d5d5;
+}
+
+
+.fa-python, .fa-bootstrap, .fa-html5, .fa-css3-alt, .fa-cloud, .fa-braille,.fa-js-square,.fa-github-alt {
+  font-size: 3em; 
   margin: 1rem;
 }
 
