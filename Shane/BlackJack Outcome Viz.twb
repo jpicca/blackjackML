@@ -3,8 +3,10 @@
 <!-- build 20201.20.0326.1623                               -->
 <workbook original-version='18.1' source-build='2020.1.2 (20201.20.0326.1623)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
+    <CustomReferenceLineTooltips />
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
@@ -287,259 +289,19 @@
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <layout dim-ordering='alphabetic' dim-percentage='0.552276' measure-ordering='alphabetic' measure-percentage='0.447724' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.551559' measure-ordering='alphabetic' measure-percentage='0.448441' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
     </datasource>
-    <datasource caption='blackJackGameTrackerData_EDA' inline='true' name='federated.1l1kgxh1kkp23m10wbt230cp5v4w' version='18.1'>
+    <datasource caption='blackJackGameData' inline='true' name='federated.1mx9zga1ytmsm01dfqtf61l2onir' version='18.1'>
       <connection class='federated'>
         <named-connections>
-          <named-connection caption='blackJackGameTrackerData_EDA' name='textscan.1w5prya11y7b8a167s4nr0vtd01n'>
-            <connection class='textscan' directory='/Users/shanergy/Desktop/SMU_DS_Homework/blackjackML_mine/Shane' filename='blackJackGameTrackerData_EDA.csv' password='' server='' />
+          <named-connection caption='blackJackGameData' name='textscan.01vsyev1oc8ukp1c2av6i1pb9t97'>
+            <connection class='textscan' directory='/Users/shanergy/Desktop/SMU_DS_Homework/blackjackML_mine/Shane' filename='blackJackGameData.csv' password='' server='' />
           </named-connection>
         </named-connections>
-        <relation connection='textscan.1w5prya11y7b8a167s4nr0vtd01n' name='blackJackGameTrackerData_EDA.csv' table='[blackJackGameTrackerData_EDA#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='string' name='lr_er' ordinal='0' />
-            <column datatype='string' name='lr_er_desc' ordinal='1' />
-            <column datatype='integer' name='handNumber' ordinal='2' />
-            <column datatype='integer' name='handResult' ordinal='3' />
-            <column datatype='integer' name='handsWonRunningTotal' ordinal='4' />
-            <column datatype='real' name='avgHandsWonRunningTotal' ordinal='5' />
-            <column datatype='integer' name='handsInInterval' ordinal='6' />
-            <column datatype='integer' name='handsWonInInterval' ordinal='7' />
-            <column datatype='real' name='avgHandsWonInInterval' ordinal='8' />
-            <column datatype='real' name='handsInFirstFinalLargeInterval' ordinal='9' />
-            <column datatype='real' name='handsWonInFirstFinalLargeInterval' ordinal='10' />
-            <column datatype='real' name='avgHandsWonInFirstFinalLargeInterval' ordinal='11' />
-            <column datatype='integer' name='handsInFirstFinalIntervalFlag' ordinal='12' />
-            <column datatype='integer' name='firstLargeIntervalFlag' ordinal='13' />
-            <column datatype='integer' name='finalLargeIntervalFlagList' ordinal='14' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>lr_er</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[lr_er]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>lr_er</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>lr_er_desc</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[lr_er_desc]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>lr_er_desc</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>handNumber</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[handNumber]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>handNumber</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>handResult</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[handResult]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>handResult</remote-alias>
-            <ordinal>3</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>handsWonRunningTotal</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[handsWonRunningTotal]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>handsWonRunningTotal</remote-alias>
-            <ordinal>4</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avgHandsWonRunningTotal</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[avgHandsWonRunningTotal]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>avgHandsWonRunningTotal</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>handsInInterval</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[handsInInterval]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>handsInInterval</remote-alias>
-            <ordinal>6</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>handsWonInInterval</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[handsWonInInterval]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>handsWonInInterval</remote-alias>
-            <ordinal>7</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avgHandsWonInInterval</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[avgHandsWonInInterval]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>avgHandsWonInInterval</remote-alias>
-            <ordinal>8</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>handsInFirstFinalLargeInterval</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[handsInFirstFinalLargeInterval]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>handsInFirstFinalLargeInterval</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>handsWonInFirstFinalLargeInterval</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[handsWonInFirstFinalLargeInterval]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>handsWonInFirstFinalLargeInterval</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avgHandsWonInFirstFinalLargeInterval</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[avgHandsWonInFirstFinalLargeInterval]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>avgHandsWonInFirstFinalLargeInterval</remote-alias>
-            <ordinal>11</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>handsInFirstFinalIntervalFlag</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[handsInFirstFinalIntervalFlag]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>handsInFirstFinalIntervalFlag</remote-alias>
-            <ordinal>12</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>firstLargeIntervalFlag</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[firstLargeIntervalFlag]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>firstLargeIntervalFlag</remote-alias>
-            <ordinal>13</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>finalLargeIntervalFlagList</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[finalLargeIntervalFlagList]</local-name>
-            <parent-name>[blackJackGameTrackerData_EDA.csv]</parent-name>
-            <remote-alias>finalLargeIntervalFlagList</remote-alias>
-            <ordinal>14</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <column caption='Avg Hands Won In First Final Large Interval' datatype='real' name='[avgHandsWonInFirstFinalLargeInterval]' role='measure' type='quantitative' />
-      <column caption='Avg Hands Won In Interval' datatype='real' name='[avgHandsWonInInterval]' role='measure' type='quantitative' />
-      <column caption='Avg Hands Won Running Total' datatype='real' name='[avgHandsWonRunningTotal]' role='measure' type='quantitative' />
-      <column caption='Final Large Interval Flag List' datatype='integer' name='[finalLargeIntervalFlagList]' role='measure' type='quantitative' />
-      <column caption='First Large Interval Flag' datatype='integer' name='[firstLargeIntervalFlag]' role='measure' type='quantitative' />
-      <column caption='Hand Number' datatype='integer' name='[handNumber]' role='dimension' type='ordinal' />
-      <column caption='Hand Result' datatype='integer' name='[handResult]' role='measure' type='quantitative' />
-      <column caption='Hands In First Final Interval Flag' datatype='integer' name='[handsInFirstFinalIntervalFlag]' role='measure' type='quantitative' />
-      <column caption='Hands In First Final Large Interval' datatype='real' name='[handsInFirstFinalLargeInterval]' role='measure' type='quantitative' />
-      <column caption='Hands In Interval' datatype='integer' name='[handsInInterval]' role='measure' type='quantitative' />
-      <column caption='Hands Won In First Final Large Interval' datatype='real' name='[handsWonInFirstFinalLargeInterval]' role='measure' type='quantitative' />
-      <column caption='Hands Won In Interval' datatype='integer' name='[handsWonInInterval]' role='measure' type='quantitative' />
-      <column caption='Hands Won Running Total' datatype='integer' name='[handsWonRunningTotal]' role='measure' type='quantitative' />
-      <column caption='Lr Er' datatype='string' name='[lr_er]' role='dimension' type='nominal' />
-      <column caption='Lr Er Desc' datatype='string' name='[lr_er_desc]' role='dimension' type='nominal' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.370234' measure-ordering='alphabetic' measure-percentage='0.629766' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-    </datasource>
-    <datasource caption='blackJackGameData_EDA' inline='true' name='federated.04nqf3p1kod1gr14v1n6t0wqxmtb' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='blackJackGameData_EDA' name='textscan.1aflrc21ucwz801h2pwb01wv25nq'>
-            <connection class='textscan' directory='/Users/shanergy/Desktop/SMU_DS_Homework/blackjackML_mine/Shane' filename='blackJackGameData_EDA.csv' password='' server='' />
-          </named-connection>
-        </named-connections>
-        <relation connection='textscan.1aflrc21ucwz801h2pwb01wv25nq' name='blackJackGameData_EDA.csv' table='[blackJackGameData_EDA#csv]' type='table'>
+        <relation connection='textscan.01vsyev1oc8ukp1c2av6i1pb9t97' name='blackJackGameData.csv' table='[blackJackGameData#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='string' name='lr_er_combo' ordinal='0' />
             <column datatype='real' name='learningRate' ordinal='1' />
@@ -581,7 +343,7 @@
           <metadata-record class='capability'>
             <remote-name />
             <remote-type>0</remote-type>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias />
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
@@ -598,7 +360,7 @@
             <remote-name>lr_er_combo</remote-name>
             <remote-type>129</remote-type>
             <local-name>[lr_er_combo]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>lr_er_combo</remote-alias>
             <ordinal>0</ordinal>
             <local-type>string</local-type>
@@ -612,7 +374,7 @@
             <remote-name>learningRate</remote-name>
             <remote-type>5</remote-type>
             <local-name>[learningRate]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>learningRate</remote-alias>
             <ordinal>1</ordinal>
             <local-type>real</local-type>
@@ -623,7 +385,7 @@
             <remote-name>explorationRate</remote-name>
             <remote-type>5</remote-type>
             <local-name>[explorationRate]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>explorationRate</remote-alias>
             <ordinal>2</ordinal>
             <local-type>real</local-type>
@@ -634,7 +396,7 @@
             <remote-name>playerHandValue</remote-name>
             <remote-type>20</remote-type>
             <local-name>[playerHandValue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>playerHandValue</remote-alias>
             <ordinal>3</ordinal>
             <local-type>integer</local-type>
@@ -645,7 +407,7 @@
             <remote-name>dealerUpCardValue</remote-name>
             <remote-type>20</remote-type>
             <local-name>[dealerUpCardValue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>dealerUpCardValue</remote-alias>
             <ordinal>4</ordinal>
             <local-type>integer</local-type>
@@ -656,7 +418,7 @@
             <remote-name>usableAce</remote-name>
             <remote-type>11</remote-type>
             <local-name>[usableAce]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>usableAce</remote-alias>
             <ordinal>5</ordinal>
             <local-type>boolean</local-type>
@@ -667,7 +429,7 @@
             <remote-name>standGamesWon</remote-name>
             <remote-type>20</remote-type>
             <local-name>[standGamesWon]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>standGamesWon</remote-alias>
             <ordinal>6</ordinal>
             <local-type>integer</local-type>
@@ -678,7 +440,7 @@
             <remote-name>standTotalGames</remote-name>
             <remote-type>20</remote-type>
             <local-name>[standTotalGames]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>standTotalGames</remote-alias>
             <ordinal>7</ordinal>
             <local-type>integer</local-type>
@@ -689,7 +451,7 @@
             <remote-name>standAvgWinRate</remote-name>
             <remote-type>5</remote-type>
             <local-name>[standAvgWinRate]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>standAvgWinRate</remote-alias>
             <ordinal>8</ordinal>
             <local-type>real</local-type>
@@ -700,7 +462,7 @@
             <remote-name>hitGamesWon</remote-name>
             <remote-type>20</remote-type>
             <local-name>[hitGamesWon]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>hitGamesWon</remote-alias>
             <ordinal>9</ordinal>
             <local-type>integer</local-type>
@@ -711,7 +473,7 @@
             <remote-name>hitTotalGames</remote-name>
             <remote-type>20</remote-type>
             <local-name>[hitTotalGames]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>hitTotalGames</remote-alias>
             <ordinal>10</ordinal>
             <local-type>integer</local-type>
@@ -722,7 +484,7 @@
             <remote-name>hitAvgWinRate</remote-name>
             <remote-type>5</remote-type>
             <local-name>[hitAvgWinRate]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>hitAvgWinRate</remote-alias>
             <ordinal>11</ordinal>
             <local-type>real</local-type>
@@ -733,7 +495,7 @@
             <remote-name>doubleDownGamesWon</remote-name>
             <remote-type>20</remote-type>
             <local-name>[doubleDownGamesWon]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>doubleDownGamesWon</remote-alias>
             <ordinal>12</ordinal>
             <local-type>integer</local-type>
@@ -744,7 +506,7 @@
             <remote-name>doubleDownTotalGames</remote-name>
             <remote-type>20</remote-type>
             <local-name>[doubleDownTotalGames]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>doubleDownTotalGames</remote-alias>
             <ordinal>13</ordinal>
             <local-type>integer</local-type>
@@ -755,7 +517,7 @@
             <remote-name>doubleDownAvgWinRate</remote-name>
             <remote-type>5</remote-type>
             <local-name>[doubleDownAvgWinRate]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>doubleDownAvgWinRate</remote-alias>
             <ordinal>14</ordinal>
             <local-type>real</local-type>
@@ -766,7 +528,7 @@
             <remote-name>splitGamesWon</remote-name>
             <remote-type>20</remote-type>
             <local-name>[splitGamesWon]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>splitGamesWon</remote-alias>
             <ordinal>15</ordinal>
             <local-type>integer</local-type>
@@ -777,7 +539,7 @@
             <remote-name>splitTotalGames</remote-name>
             <remote-type>20</remote-type>
             <local-name>[splitTotalGames]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>splitTotalGames</remote-alias>
             <ordinal>16</ordinal>
             <local-type>integer</local-type>
@@ -788,7 +550,7 @@
             <remote-name>splitAvgWinRate</remote-name>
             <remote-type>5</remote-type>
             <local-name>[splitAvgWinRate]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>splitAvgWinRate</remote-alias>
             <ordinal>17</ordinal>
             <local-type>real</local-type>
@@ -799,7 +561,7 @@
             <remote-name>joinKey</remote-name>
             <remote-type>129</remote-type>
             <local-name>[joinKey]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>joinKey</remote-alias>
             <ordinal>18</ordinal>
             <local-type>string</local-type>
@@ -813,7 +575,7 @@
             <remote-name>minBet_bet</remote-name>
             <remote-type>20</remote-type>
             <local-name>[minBet_bet]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>minBet_bet</remote-alias>
             <ordinal>19</ordinal>
             <local-type>integer</local-type>
@@ -824,7 +586,7 @@
             <remote-name>minBet_standQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[minBet_standQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>minBet_standQvalue</remote-alias>
             <ordinal>20</ordinal>
             <local-type>real</local-type>
@@ -835,7 +597,7 @@
             <remote-name>minBet_hitQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[minBet_hitQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>minBet_hitQvalue</remote-alias>
             <ordinal>21</ordinal>
             <local-type>real</local-type>
@@ -846,7 +608,7 @@
             <remote-name>minBet_doubleDownQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[minBet_doubleDownQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>minBet_doubleDownQvalue</remote-alias>
             <ordinal>22</ordinal>
             <local-type>real</local-type>
@@ -857,7 +619,7 @@
             <remote-name>minBet_splitQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[minBet_splitQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>minBet_splitQvalue</remote-alias>
             <ordinal>23</ordinal>
             <local-type>real</local-type>
@@ -868,7 +630,7 @@
             <remote-name>midBet_bet</remote-name>
             <remote-type>20</remote-type>
             <local-name>[midBet_bet]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>midBet_bet</remote-alias>
             <ordinal>24</ordinal>
             <local-type>integer</local-type>
@@ -879,7 +641,7 @@
             <remote-name>midBet_standQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[midBet_standQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>midBet_standQvalue</remote-alias>
             <ordinal>25</ordinal>
             <local-type>real</local-type>
@@ -890,7 +652,7 @@
             <remote-name>midBet_hitQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[midBet_hitQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>midBet_hitQvalue</remote-alias>
             <ordinal>26</ordinal>
             <local-type>real</local-type>
@@ -901,7 +663,7 @@
             <remote-name>midBet_doubleDownQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[midBet_doubleDownQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>midBet_doubleDownQvalue</remote-alias>
             <ordinal>27</ordinal>
             <local-type>real</local-type>
@@ -912,7 +674,7 @@
             <remote-name>midBet_splitQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[midBet_splitQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>midBet_splitQvalue</remote-alias>
             <ordinal>28</ordinal>
             <local-type>real</local-type>
@@ -923,7 +685,7 @@
             <remote-name>maxBet_bet</remote-name>
             <remote-type>20</remote-type>
             <local-name>[maxBet_bet]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>maxBet_bet</remote-alias>
             <ordinal>29</ordinal>
             <local-type>integer</local-type>
@@ -934,7 +696,7 @@
             <remote-name>maxBet_standQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[maxBet_standQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>maxBet_standQvalue</remote-alias>
             <ordinal>30</ordinal>
             <local-type>real</local-type>
@@ -945,7 +707,7 @@
             <remote-name>maxBet_hitQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[maxBet_hitQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>maxBet_hitQvalue</remote-alias>
             <ordinal>31</ordinal>
             <local-type>real</local-type>
@@ -956,7 +718,7 @@
             <remote-name>maxBet_doubleDownQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[maxBet_doubleDownQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>maxBet_doubleDownQvalue</remote-alias>
             <ordinal>32</ordinal>
             <local-type>real</local-type>
@@ -967,7 +729,7 @@
             <remote-name>maxBet_splitQvalue</remote-name>
             <remote-type>5</remote-type>
             <local-name>[maxBet_splitQvalue]</local-name>
-            <parent-name>[blackJackGameData_EDA.csv]</parent-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
             <remote-alias>maxBet_splitQvalue</remote-alias>
             <ordinal>33</ordinal>
             <local-type>real</local-type>
@@ -1019,8 +781,1217 @@
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
     </datasource>
+    <datasource caption='blackJackGameTrackerData' inline='true' name='federated.16aeqsq11nbcxj1et5ffv0g8sfju' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='blackJackGameTrackerData' name='textscan.1etb9dl1ofislg101xefi0r7124i'>
+            <connection class='textscan' directory='/Users/shanergy/Desktop/SMU_DS_Homework/blackjackML_mine/Shane' filename='blackJackGameTrackerData.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1etb9dl1ofislg101xefi0r7124i' name='blackJackGameTrackerData.csv' table='[blackJackGameTrackerData#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='lr_er' ordinal='0' />
+            <column datatype='string' name='lr_er_desc' ordinal='1' />
+            <column datatype='integer' name='handNumber' ordinal='2' />
+            <column datatype='integer' name='handResult' ordinal='3' />
+            <column datatype='integer' name='handsWonRunningTotal' ordinal='4' />
+            <column datatype='real' name='avgHandsWonRunningTotal' ordinal='5' />
+            <column datatype='integer' name='handsInInterval' ordinal='6' />
+            <column datatype='integer' name='handsWonInInterval' ordinal='7' />
+            <column datatype='real' name='avgHandsWonInInterval' ordinal='8' />
+            <column datatype='real' name='handsInFirstFinalLargeInterval' ordinal='9' />
+            <column datatype='real' name='handsWonInFirstFinalLargeInterval' ordinal='10' />
+            <column datatype='real' name='avgHandsWonInFirstFinalLargeInterval' ordinal='11' />
+            <column datatype='integer' name='handsInFirstFinalIntervalFlag' ordinal='12' />
+            <column datatype='integer' name='firstLargeIntervalFlag' ordinal='13' />
+            <column datatype='integer' name='finalLargeIntervalFlagList' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lr_er</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lr_er]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>lr_er</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lr_er_desc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lr_er_desc]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>lr_er_desc</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handNumber</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[handNumber]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>handNumber</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handResult</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[handResult]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>handResult</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handsWonRunningTotal</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[handsWonRunningTotal]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>handsWonRunningTotal</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avgHandsWonRunningTotal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avgHandsWonRunningTotal]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>avgHandsWonRunningTotal</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handsInInterval</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[handsInInterval]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>handsInInterval</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handsWonInInterval</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[handsWonInInterval]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>handsWonInInterval</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avgHandsWonInInterval</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avgHandsWonInInterval]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>avgHandsWonInInterval</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handsInFirstFinalLargeInterval</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[handsInFirstFinalLargeInterval]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>handsInFirstFinalLargeInterval</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handsWonInFirstFinalLargeInterval</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[handsWonInFirstFinalLargeInterval]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>handsWonInFirstFinalLargeInterval</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avgHandsWonInFirstFinalLargeInterval</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avgHandsWonInFirstFinalLargeInterval]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>avgHandsWonInFirstFinalLargeInterval</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handsInFirstFinalIntervalFlag</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[handsInFirstFinalIntervalFlag]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>handsInFirstFinalIntervalFlag</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>firstLargeIntervalFlag</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[firstLargeIntervalFlag]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>firstLargeIntervalFlag</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>finalLargeIntervalFlagList</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[finalLargeIntervalFlagList]</local-name>
+            <parent-name>[blackJackGameTrackerData.csv]</parent-name>
+            <remote-alias>finalLargeIntervalFlagList</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Avg Hands Won In First Final Large Interval' datatype='real' name='[avgHandsWonInFirstFinalLargeInterval]' role='measure' type='quantitative' />
+      <column caption='Avg Hands Won In Interval' datatype='real' name='[avgHandsWonInInterval]' role='measure' type='quantitative' />
+      <column caption='Avg Hands Won Running Total' datatype='real' name='[avgHandsWonRunningTotal]' role='measure' type='quantitative' />
+      <column caption='Final Large Interval Flag List' datatype='integer' name='[finalLargeIntervalFlagList]' role='measure' type='quantitative' />
+      <column caption='First Large Interval Flag' datatype='integer' name='[firstLargeIntervalFlag]' role='measure' type='quantitative' />
+      <column caption='Hand Number' datatype='integer' name='[handNumber]' role='dimension' type='ordinal' />
+      <column caption='Hand Result' datatype='integer' name='[handResult]' role='measure' type='quantitative' />
+      <column caption='Hands In First Final Interval Flag' datatype='integer' name='[handsInFirstFinalIntervalFlag]' role='measure' type='quantitative' />
+      <column caption='Hands In First Final Large Interval' datatype='real' name='[handsInFirstFinalLargeInterval]' role='measure' type='quantitative' />
+      <column caption='Hands In Interval' datatype='integer' name='[handsInInterval]' role='measure' type='quantitative' />
+      <column caption='Hands Won In First Final Large Interval' datatype='real' name='[handsWonInFirstFinalLargeInterval]' role='measure' type='quantitative' />
+      <column caption='Hands Won In Interval' datatype='integer' name='[handsWonInInterval]' role='measure' type='quantitative' />
+      <column caption='Hands Won Running Total' datatype='integer' name='[handsWonRunningTotal]' role='measure' type='quantitative' />
+      <column caption='Lr Er' datatype='string' name='[lr_er]' role='dimension' type='nominal' />
+      <column caption='Lr Er Desc' datatype='string' name='[lr_er_desc]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.367424' measure-ordering='alphabetic' measure-percentage='0.632576' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='blackJackGameData (2)' inline='true' name='federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='blackJackGameData' name='textscan.1haan4r0h6ey2y11hiq7e1guk82j'>
+            <connection class='textscan' directory='/Users/shanergy/Desktop/SMU_DS_Homework/blackjackML_mine/Shane' filename='blackJackGameData.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1haan4r0h6ey2y11hiq7e1guk82j' name='blackJackGameData.csv' table='[blackJackGameData#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='lr_er_combo' ordinal='0' />
+            <column datatype='real' name='learningRate' ordinal='1' />
+            <column datatype='real' name='explorationRate' ordinal='2' />
+            <column datatype='integer' name='playerHandValue' ordinal='3' />
+            <column datatype='integer' name='dealerUpCardValue' ordinal='4' />
+            <column datatype='boolean' name='usableAce' ordinal='5' />
+            <column datatype='integer' name='standGamesWon' ordinal='6' />
+            <column datatype='integer' name='standTotalGames' ordinal='7' />
+            <column datatype='real' name='standAvgWinRate' ordinal='8' />
+            <column datatype='integer' name='hitGamesWon' ordinal='9' />
+            <column datatype='integer' name='hitTotalGames' ordinal='10' />
+            <column datatype='real' name='hitAvgWinRate' ordinal='11' />
+            <column datatype='integer' name='doubleDownGamesWon' ordinal='12' />
+            <column datatype='integer' name='doubleDownTotalGames' ordinal='13' />
+            <column datatype='real' name='doubleDownAvgWinRate' ordinal='14' />
+            <column datatype='integer' name='splitGamesWon' ordinal='15' />
+            <column datatype='integer' name='splitTotalGames' ordinal='16' />
+            <column datatype='real' name='splitAvgWinRate' ordinal='17' />
+            <column datatype='string' name='joinKey' ordinal='18' />
+            <column datatype='integer' name='minBet_bet' ordinal='19' />
+            <column datatype='real' name='minBet_standQvalue' ordinal='20' />
+            <column datatype='real' name='minBet_hitQvalue' ordinal='21' />
+            <column datatype='real' name='minBet_doubleDownQvalue' ordinal='22' />
+            <column datatype='real' name='minBet_splitQvalue' ordinal='23' />
+            <column datatype='integer' name='midBet_bet' ordinal='24' />
+            <column datatype='real' name='midBet_standQvalue' ordinal='25' />
+            <column datatype='real' name='midBet_hitQvalue' ordinal='26' />
+            <column datatype='real' name='midBet_doubleDownQvalue' ordinal='27' />
+            <column datatype='real' name='midBet_splitQvalue' ordinal='28' />
+            <column datatype='integer' name='maxBet_bet' ordinal='29' />
+            <column datatype='real' name='maxBet_standQvalue' ordinal='30' />
+            <column datatype='real' name='maxBet_hitQvalue' ordinal='31' />
+            <column datatype='real' name='maxBet_doubleDownQvalue' ordinal='32' />
+            <column datatype='real' name='maxBet_splitQvalue' ordinal='33' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lr_er_combo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lr_er_combo]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>lr_er_combo</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>learningRate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[learningRate]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>learningRate</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>explorationRate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[explorationRate]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>explorationRate</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>playerHandValue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[playerHandValue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>playerHandValue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dealerUpCardValue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dealerUpCardValue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>dealerUpCardValue</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usableAce</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[usableAce]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>usableAce</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>standGamesWon</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[standGamesWon]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>standGamesWon</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>standTotalGames</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[standTotalGames]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>standTotalGames</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>standAvgWinRate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[standAvgWinRate]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>standAvgWinRate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hitGamesWon</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hitGamesWon]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>hitGamesWon</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hitTotalGames</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hitTotalGames]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>hitTotalGames</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hitAvgWinRate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[hitAvgWinRate]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>hitAvgWinRate</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>doubleDownGamesWon</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[doubleDownGamesWon]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>doubleDownGamesWon</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>doubleDownTotalGames</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[doubleDownTotalGames]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>doubleDownTotalGames</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>doubleDownAvgWinRate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[doubleDownAvgWinRate]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>doubleDownAvgWinRate</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>splitGamesWon</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[splitGamesWon]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>splitGamesWon</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>splitTotalGames</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[splitTotalGames]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>splitTotalGames</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>splitAvgWinRate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[splitAvgWinRate]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>splitAvgWinRate</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>joinKey</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[joinKey]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>joinKey</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minBet_bet</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[minBet_bet]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>minBet_bet</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minBet_standQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[minBet_standQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>minBet_standQvalue</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minBet_hitQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[minBet_hitQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>minBet_hitQvalue</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minBet_doubleDownQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[minBet_doubleDownQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>minBet_doubleDownQvalue</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minBet_splitQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[minBet_splitQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>minBet_splitQvalue</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>midBet_bet</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[midBet_bet]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>midBet_bet</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>midBet_standQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[midBet_standQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>midBet_standQvalue</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>midBet_hitQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[midBet_hitQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>midBet_hitQvalue</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>midBet_doubleDownQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[midBet_doubleDownQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>midBet_doubleDownQvalue</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>midBet_splitQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[midBet_splitQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>midBet_splitQvalue</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>maxBet_bet</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[maxBet_bet]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>maxBet_bet</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>maxBet_standQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[maxBet_standQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>maxBet_standQvalue</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>maxBet_hitQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[maxBet_hitQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>maxBet_hitQvalue</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>maxBet_doubleDownQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[maxBet_doubleDownQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>maxBet_doubleDownQvalue</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>maxBet_splitQvalue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[maxBet_splitQvalue]</local-name>
+            <parent-name>[blackJackGameData.csv]</parent-name>
+            <remote-alias>maxBet_splitQvalue</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]&quot;' value='Double Down' />
+          <alias key='&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&quot;' value='Hit' />
+          <alias key='&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&quot;' value='Split' />
+          <alias key='&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]&quot;' value='Stand' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Dealer Up Card Value' datatype='integer' name='[dealerUpCardValue]' role='measure' type='quantitative' />
+      <column caption='Double Down Avg Win Rate' datatype='real' name='[doubleDownAvgWinRate]' role='measure' type='quantitative' />
+      <column caption='Double Down Games Won' datatype='integer' name='[doubleDownGamesWon]' role='measure' type='quantitative' />
+      <column caption='Double Down Total Games' datatype='integer' name='[doubleDownTotalGames]' role='measure' type='quantitative' />
+      <column caption='Exploration Rate' datatype='real' name='[explorationRate]' role='measure' type='quantitative' />
+      <column caption='Hit Avg Win Rate' datatype='real' name='[hitAvgWinRate]' role='measure' type='quantitative' />
+      <column caption='Hit Games Won' datatype='integer' name='[hitGamesWon]' role='measure' type='quantitative' />
+      <column caption='Hit Total Games' datatype='integer' name='[hitTotalGames]' role='measure' type='quantitative' />
+      <column caption='Join Key' datatype='string' name='[joinKey]' role='dimension' type='nominal' />
+      <column caption='Learning Rate' datatype='real' name='[learningRate]' role='measure' type='quantitative' />
+      <column caption='Lr Er Combo' datatype='string' name='[lr_er_combo]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;0.05_0.05&quot;' value='RL(0.05_0.05)' />
+          <alias key='&quot;random&quot;' value='Random' />
+        </aliases>
+      </column>
+      <column caption='maxBet bet' datatype='integer' name='[maxBet_bet]' role='measure' type='quantitative' />
+      <column caption='maxBet doubleDownQvalue' datatype='real' name='[maxBet_doubleDownQvalue]' role='measure' type='quantitative' />
+      <column caption='maxBet hitQvalue' datatype='real' name='[maxBet_hitQvalue]' role='measure' type='quantitative' />
+      <column caption='maxBet splitQvalue' datatype='real' name='[maxBet_splitQvalue]' role='measure' type='quantitative' />
+      <column caption='maxBet standQvalue' datatype='real' name='[maxBet_standQvalue]' role='measure' type='quantitative' />
+      <column caption='midBet bet' datatype='integer' name='[midBet_bet]' role='measure' type='quantitative' />
+      <column caption='midBet doubleDownQvalue' datatype='real' name='[midBet_doubleDownQvalue]' role='measure' type='quantitative' />
+      <column caption='midBet hitQvalue' datatype='real' name='[midBet_hitQvalue]' role='measure' type='quantitative' />
+      <column caption='midBet splitQvalue' datatype='real' name='[midBet_splitQvalue]' role='measure' type='quantitative' />
+      <column caption='midBet standQvalue' datatype='real' name='[midBet_standQvalue]' role='measure' type='quantitative' />
+      <column caption='minBet bet' datatype='integer' name='[minBet_bet]' role='measure' type='quantitative' />
+      <column caption='minBet doubleDownQvalue' datatype='real' name='[minBet_doubleDownQvalue]' role='measure' type='quantitative' />
+      <column caption='minBet hitQvalue' datatype='real' name='[minBet_hitQvalue]' role='measure' type='quantitative' />
+      <column caption='minBet splitQvalue' datatype='real' name='[minBet_splitQvalue]' role='measure' type='quantitative' />
+      <column caption='minBet standQvalue' datatype='real' name='[minBet_standQvalue]' role='measure' type='quantitative' />
+      <column caption='Player Hand Value' datatype='integer' name='[playerHandValue]' role='measure' type='quantitative' />
+      <column caption='Split Avg Win Rate' datatype='real' name='[splitAvgWinRate]' role='measure' type='quantitative' />
+      <column caption='Split Games Won' datatype='integer' name='[splitGamesWon]' role='measure' type='quantitative' />
+      <column caption='Split Total Games' datatype='integer' name='[splitTotalGames]' role='measure' type='quantitative' />
+      <column caption='Stand Avg Win Rate' datatype='real' name='[standAvgWinRate]' role='measure' type='quantitative' />
+      <column caption='Stand Games Won' datatype='integer' name='[standGamesWon]' role='measure' type='quantitative' />
+      <column caption='Stand Total Games' datatype='integer' name='[standTotalGames]' role='measure' type='quantitative' />
+      <column caption='Usable Ace' datatype='boolean' name='[usableAce]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='false' value='A=1' />
+          <alias key='true' value='A=11' />
+        </aliases>
+      </column>
+      <column-instance column='[doubleDownAvgWinRate]' derivation='Avg' name='[avg:doubleDownAvgWinRate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[hitAvgWinRate]' derivation='Avg' name='[avg:hitAvgWinRate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[splitAvgWinRate]' derivation='Avg' name='[avg:splitAvgWinRate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[standAvgWinRate]' derivation='Avg' name='[avg:standAvgWinRate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[lr_er_combo]' derivation='None' name='[none:lr_er_combo:nk]' pivot='key' type='nominal' />
+      <column-instance column='[doubleDownAvgWinRate]' derivation='Sum' name='[sum:doubleDownAvgWinRate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[hitAvgWinRate]' derivation='Sum' name='[sum:hitAvgWinRate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[splitAvgWinRate]' derivation='Sum' name='[sum:splitAvgWinRate:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[standAvgWinRate]' derivation='Sum' name='[sum:standAvgWinRate:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.348375' measure-ordering='alphabetic' measure-percentage='0.651625' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:lr_er_combo:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;0.3_0.1&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;0.3_0.5&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;0.5_0.05&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;0.05_0.1&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;1_1&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;random&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;0.5_1&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;0.5_0.5&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;0.3_0.05&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;0.1_0.5&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;0.3_0.3&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;0.1_0.1&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;1_0.3&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;1_0.1&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;0.1_0.05&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;0.5_0.1&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;0.05_0.3&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;0.05_0.05&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;0.05_1&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;0.05_0.5&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;0.1_1&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;1_0.5&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;0.3_1&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;0.5_0.3&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;0.1_0.3&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;1_0.05&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[sum:doubleDownAvgWinRate:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[sum:standAvgWinRate:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[sum:splitAvgWinRate:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[sum:hitAvgWinRate:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+    </datasource>
   </datasources>
   <worksheets>
+    <worksheet name='A value'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='blackJackGameData (2)' name='federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)'>
+            <column-instance column='[doubleDownAvgWinRate]' derivation='Avg' name='[avg:doubleDownAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[hitAvgWinRate]' derivation='Avg' name='[avg:hitAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[splitAvgWinRate]' derivation='Avg' name='[avg:splitAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[standAvgWinRate]' derivation='Avg' name='[avg:standAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column caption='Double Down Avg Win Rate' datatype='real' name='[doubleDownAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Hit Avg Win Rate' datatype='real' name='[hitAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Lr Er Combo' datatype='string' name='[lr_er_combo]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;0.05_0.05&quot;' value='RL(0.05_0.05)' />
+                <alias key='&quot;random&quot;' value='Random' />
+              </aliases>
+            </column>
+            <column-instance column='[lr_er_combo]' derivation='None' name='[none:lr_er_combo:nk]' pivot='key' type='nominal' />
+            <column-instance column='[usableAce]' derivation='None' name='[none:usableAce:nk]' pivot='key' type='nominal' />
+            <column caption='Split Avg Win Rate' datatype='real' name='[splitAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Stand Avg Win Rate' datatype='real' name='[standAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Usable Ace' datatype='boolean' name='[usableAce]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='false' value='A=1' />
+                <alias key='true' value='A=11' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:lr_er_combo:nk]' member='&quot;0.05_0.05&quot;' />
+              <groupfilter function='member' level='[none:lr_er_combo:nk]' member='&quot;random&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</column>
+            <column>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]' scope='rows' value='Win Percentage (%)' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='#000000' />
+            <format attr='color' data-class='subtotal' scope='cols' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='color' data-class='total' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='#000000' />
+            <format attr='band-color' scope='cols' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='bold' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]' value='p0%' />
+            <format attr='font-size' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='12' />
+            <format attr='font-size' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]' value='10' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#ffffff' />
+            <format attr='background-color' data-class='total' value='#ffffff' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f0f1e8' />
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='band-size' scope='cols' value='2' />
+            <format attr='band-level' scope='cols' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]' value='Actions' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</rows>
+        <cols>([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk] / ([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names] / [federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]))</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;0.05_0.05&quot;</value>
+                <value>true</value>
+                <value>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&quot;</value>
+                <value>0.40975500000000009</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;random&quot;</value>
+                <value>true</value>
+                <value>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&quot;</value>
+                <value>0.34459500000000015</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;random&quot;</value>
+                <value>false</value>
+                <value>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&quot;</value>
+                <value>0.15219999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;0.05_0.05&quot;</value>
+                <value>false</value>
+                <value>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&quot;</value>
+                <value>0.17179499999999995</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;random&quot;</value>
+                <value>false</value>
+                <value>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&quot;</value>
+                <value>0.21166000000000007</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;0.05_0.05&quot;</value>
+                <value>false</value>
+                <value>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&quot;</value>
+                <value>0.2764299999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;random&quot;</value>
+                <value>true</value>
+                <value>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&quot;</value>
+                <value>0.021484999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+                  <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;0.05_0.05&quot;</value>
+                <value>true</value>
+                <value>&quot;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&quot;</value>
+                <value>0.02367</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{E561E70F-616B-4BDE-A652-FE1BCCD0B9F7}' />
+    </worksheet>
     <worksheet name='Action Matrix'>
       <table>
         <view>
@@ -1070,6 +2041,220 @@
       </table>
       <simple-id uuid='{2A226700-B3FE-41FD-BA22-6BA183B2C6CC}' />
     </worksheet>
+    <worksheet name='Dealer Up Card Value'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='blackJackGameData (2)' name='federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)'>
+            <column-instance column='[doubleDownAvgWinRate]' derivation='Avg' name='[avg:doubleDownAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[hitAvgWinRate]' derivation='Avg' name='[avg:hitAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[splitAvgWinRate]' derivation='Avg' name='[avg:splitAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[standAvgWinRate]' derivation='Avg' name='[avg:standAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column caption='Dealer Up Card Value' datatype='integer' name='[dealerUpCardValue]' role='measure' type='quantitative' />
+            <column caption='Double Down Avg Win Rate' datatype='real' name='[doubleDownAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Hit Avg Win Rate' datatype='real' name='[hitAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Lr Er Combo' datatype='string' name='[lr_er_combo]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;0.05_0.05&quot;' value='RL(0.05_0.05)' />
+                <alias key='&quot;random&quot;' value='Random' />
+              </aliases>
+            </column>
+            <column-instance column='[dealerUpCardValue]' derivation='None' name='[none:dealerUpCardValue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[lr_er_combo]' derivation='None' name='[none:lr_er_combo:nk]' pivot='key' type='nominal' />
+            <column caption='Split Avg Win Rate' datatype='real' name='[splitAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Stand Avg Win Rate' datatype='real' name='[standAvgWinRate]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:lr_er_combo:nk]' member='&quot;0.05_0.05&quot;' />
+              <groupfilter function='member' level='[none:lr_er_combo:nk]' member='&quot;random&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:dealerUpCardValue:qk]' field-type='quantitative' major-origin='0' major-spacing='1' max='11' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' scope='cols' value='Avg. Win% (Stand)' />
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' scope='cols' value='Avg. Win% (Hit)' />
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' scope='cols' value='Avg. Win% (Double Down)' />
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' scope='cols' value='Avg. Win% (Split)' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='10' />
+            <format attr='font-weight' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='bold' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' value='p0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' value='p0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' value='p0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' value='p0%' />
+            <format attr='text-orientation' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#ffffff' />
+            <format attr='fill-below' id='refline0' value='#d5e1d4' />
+            <format attr='fill-above' id='refline2' value='#00000000' />
+            <format attr='fill-below' id='refline2' value='#ffd7d0' />
+            <format attr='fill-above' id='refline4' value='#00000000' />
+            <format attr='fill-below' id='refline4' value='#c9cdff' />
+            <format attr='fill-above' id='refline6' value='#00000000' />
+            <format attr='fill-below' id='refline6' value='#fff9c5' />
+            <format attr='stroke-size' id='refline4' value='2' />
+            <format attr='line-visibility' id='refline4' value='on' />
+            <format attr='line-pattern-only' id='refline4' value='solid' />
+            <format attr='stroke-color' id='refline4' value='#4e79a7' />
+            <format attr='stroke-color' id='refline2' value='#e15759' />
+            <format attr='stroke-color' id='refline6' value='#e15759' />
+            <format attr='stroke-color' id='refline0' value='#4e79a7' />
+            <format attr='text-format' id='refline0' value='p0.0%' />
+            <format attr='text-format' id='refline2' value='p0.0%' />
+            <format attr='text-format' id='refline4' value='p0.0%' />
+            <format attr='text-format' id='refline6' value='p0.0%' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-size' value='10' />
+            <format attr='font-style' value='normal' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='Simulation Condition ' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='value' probability='95' scope='per-pane' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' z-order='1' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' enable-instant-analytics='true' formula='average' id='refline2' label-type='value' probability='95' scope='per-pane' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' z-order='2' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' enable-instant-analytics='true' formula='average' id='refline4' label-type='value' probability='95' scope='per-pane' tooltip='&lt;Computation&gt;&lt;Value&gt;' tooltip-type='custom' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' z-order='3' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' enable-instant-analytics='true' formula='average' id='refline6' label-type='value' probability='95' scope='per-pane' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' z-order='4' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-center' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Simulation Condition:</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Dealer Up Card Value:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:dealerUpCardValue:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Win Percentage:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-center' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Simulation Condition:</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Dealer Up Card Value:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:dealerUpCardValue:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Win Percentage (Hit):</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-center' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Simulation Condition:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Dealer Up Card Value:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:dealerUpCardValue:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Win Rercentage(Double Down):</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-center' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Simulation Condition:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Dealer Up Card Value:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:dealerUpCardValue:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Win Percentage(Split ):</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk] * [federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:dealerUpCardValue:qk])</rows>
+        <cols>([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk] + ([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk] + ([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk] + [federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk])))</cols>
+      </table>
+      <simple-id uuid='{EB51238B-E252-43EF-BAC4-960CDED35AED}' />
+    </worksheet>
     <worksheet name='Impact of Bet'>
       <table>
         <view>
@@ -1118,6 +2303,259 @@
         </pages>
       </table>
       <simple-id uuid='{D05E9DC3-EE78-4DD1-9359-C64981B5E23A}' />
+    </worksheet>
+    <worksheet name='Player Hand Values'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Player Hand Values</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='blackJackGameData (2)' name='federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)'>
+            <column-instance column='[doubleDownAvgWinRate]' derivation='Avg' name='[avg:doubleDownAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[hitAvgWinRate]' derivation='Avg' name='[avg:hitAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[splitAvgWinRate]' derivation='Avg' name='[avg:splitAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[standAvgWinRate]' derivation='Avg' name='[avg:standAvgWinRate:qk]' pivot='key' type='quantitative' />
+            <column caption='Double Down Avg Win Rate' datatype='real' name='[doubleDownAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Hit Avg Win Rate' datatype='real' name='[hitAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Lr Er Combo' datatype='string' name='[lr_er_combo]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;0.05_0.05&quot;' value='RL(0.05_0.05)' />
+                <alias key='&quot;random&quot;' value='Random' />
+              </aliases>
+            </column>
+            <column-instance column='[lr_er_combo]' derivation='None' name='[none:lr_er_combo:nk]' pivot='key' type='nominal' />
+            <column-instance column='[playerHandValue]' derivation='None' name='[none:playerHandValue:qk]' pivot='key' type='quantitative' />
+            <column caption='Player Hand Value' datatype='integer' name='[playerHandValue]' role='measure' type='quantitative' />
+            <column caption='Split Avg Win Rate' datatype='real' name='[splitAvgWinRate]' role='measure' type='quantitative' />
+            <column caption='Stand Avg Win Rate' datatype='real' name='[standAvgWinRate]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:lr_er_combo:nk]' member='&quot;0.05_0.05&quot;' />
+              <groupfilter function='member' level='[none:lr_er_combo:nk]' member='&quot;random&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:playerHandValue:qk]' scope='rows' value='Player Hand Values' />
+            <encoding attr='space' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:playerHandValue:qk]' field-type='quantitative' major-origin='0' major-spacing='1' max='22' min='1' minor-origin='0' minor-show='false' minor-spacing='1' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' scope='cols' value='Avg. Win % ( Stand)' />
+            <encoding attr='space' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.29999999999999999' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' scope='cols' value='Avg. Win % ( Hit)' />
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' scope='cols' value='Avg. Win% (Double Down)' />
+            <format attr='title' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' scope='cols' value='Avg.Win% ( Split)' />
+            <encoding attr='space' class='0' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' field-type='quantitative' max='0.29999999999999999' min='0.0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' value='p0.0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' value='p0.0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' value='p0.0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='text-orientation' data-class='subtotal' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' value='p0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' value='p0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' value='p0%' />
+            <format attr='text-format' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' value='p0%' />
+            <format attr='font-weight' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='bold' />
+            <format attr='color' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='#1b1b1b' />
+            <format attr='font-size' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='10' />
+            <format attr='text-orientation' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='fill-color' id='refline0' value='#d5e1d4' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='stroke-size' id='refline0' value='2' />
+            <format attr='line-visibility' id='refline2' value='on' />
+            <format attr='line-pattern-only' id='refline2' value='dashed' />
+            <format attr='stroke-size' id='refline2' value='2' />
+            <format attr='stroke-color' id='refline2' value='#e15759' />
+            <format attr='fill-color' id='refline4' value='#c9cdff' />
+            <format attr='line-visibility' id='refline4' value='on' />
+            <format attr='line-pattern-only' id='refline4' value='dashed' />
+            <format attr='stroke-color' id='refline6' value='#e15759' />
+            <format attr='line-visibility' id='refline6' value='on' />
+            <format attr='line-pattern-only' id='refline6' value='dashed' />
+            <format attr='fill-color' id='refline2' value='#ffd7d0' />
+            <format attr='stroke-color' id='refline0' value='#4e79a7' />
+            <format attr='stroke-color' id='refline4' value='#4e79a7' />
+            <format attr='fill-color' id='refline6' value='#fff9c5' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' value='Simulation Condition ' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' enable-instant-analytics='true' formula='min' id='refline0' label-type='value' paired-id='refline1' scope='per-pane' symmetric='false' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' z-order='6' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' enable-instant-analytics='true' formula='max' id='refline1' label-type='value' paired-id='refline0' scope='per-pane' symmetric='false' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]' z-order='2' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' enable-instant-analytics='true' formula='min' id='refline2' label-type='value' paired-id='refline3' scope='per-pane' symmetric='false' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' z-order='1' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' enable-instant-analytics='true' formula='max' id='refline3' label-type='value' paired-id='refline2' scope='per-pane' symmetric='false' tooltip='&lt;Computation&gt;&lt;Value&gt;' tooltip-type='custom' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]' z-order='3' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' enable-instant-analytics='false' formula='min' id='refline4' label-type='value' paired-id='refline5' scope='per-pane' symmetric='false' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' z-order='4' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' enable-instant-analytics='false' formula='max' id='refline5' label-type='value' paired-id='refline4' scope='per-pane' symmetric='false' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]' z-order='4' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' enable-instant-analytics='true' formula='min' id='refline6' label-type='none' paired-id='refline7' scope='per-pane' symmetric='false' tooltip-type='none' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' z-order='5' />
+            <reference-line axis-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' enable-instant-analytics='true' formula='max' id='refline7' label-type='value' paired-id='refline6' scope='per-pane' symmetric='false' value-column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]' z-order='5' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-center' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Simulation Condition:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Player Hand Value:</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:playerHandValue:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg Win Percentage (Stand):</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+                <format attr='has-stroke' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-center' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Simulation Condition:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Player Hand Value:</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:playerHandValue:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg Win Percentage (Hit ):</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-center' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Simulation Condition:&#9;</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Player Hand Value:</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:playerHandValue:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Win Percentage (Double Down):</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-center' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Lr Er Combo:</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Player Hand Value:</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:playerHandValue:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Win Percentage(Split ):</run>
+                <run bold='true'>&lt;[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk] * [federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:playerHandValue:qk])</rows>
+        <cols>([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:standAvgWinRate:qk] + ([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:hitAvgWinRate:qk] + ([federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:doubleDownAvgWinRate:qk] + [federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[avg:splitAvgWinRate:qk])))</cols>
+      </table>
+      <simple-id uuid='{75A9A93B-EF65-485F-9B70-53E2BAA9D17E}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0F7B5FE2-858D-4ABB-8586-EE6C8952CB99}' />
     </worksheet>
   </worksheets>
   <dashboards>
@@ -1186,7 +2624,7 @@
       <simple-id uuid='{128D3296-ABB7-43B4-B80F-335DE73ED52A}' />
     </dashboard>
   </dashboards>
-  <windows source-height='93'>
+  <windows source-height='63'>
     <window class='worksheet' name='Action Matrix'>
       <cards>
         <edge name='left'>
@@ -1304,7 +2742,7 @@
       </device-preview>
       <simple-id uuid='{5A7ECA1A-C02B-4385-976F-E5A0E77763DF}' />
     </window>
-    <window class='dashboard' maximized='true' name='Impact of Bet DB'>
+    <window class='dashboard' name='Impact of Bet DB'>
       <viewpoints>
         <viewpoint name='Impact of Bet'>
           <current-page>
@@ -1314,14 +2752,348 @@
           </current-page>
         </viewpoint>
       </viewpoints>
-      <active id='17' />
+      <active id='-1' />
       <device-preview selected='Desktop'>
         <device is-portrait='false' type='Desktop' />
       </device-preview>
       <simple-id uuid='{51BF0606-D822-4FB5-93D9-79F612BE537F}' />
     </window>
+    <window class='worksheet' name='Player Hand Values' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='161'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{38C1BB7C-A47B-4D7B-B2A4-8FED306F9B14}' />
+    </window>
+    <window class='worksheet' name='Dealer Up Card Value' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{AF1D4436-249B-4969-B224-13637389B623}' />
+    </window>
+    <window class='worksheet' maximized='true' name='A value' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[:Measure Names]</field>
+            <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:lr_er_combo:nk]</field>
+            <field>[federated.1mx9zga1ytmsm01dfqtf61l2onir (copy)].[none:usableAce:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2A79261D-0E6A-457A-ADE3-F331A5256A57}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E6CCC9E0-AA88-4156-9B8A-B88989C2133C}' />
+    </window>
   </windows>
   <thumbnails>
+    <thumbnail height='384' name='A value' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAgAElEQVR4nO3deXCb933n8fcDgDgIkJREEbypgzqoyzotmZIlW4nl22mubpNmY7dJk6ZH
+      sjPtbGc6s7PNJLvbnfRuttMmTZqrcZpO0sSJY9eOb+syxUOydfOQeEniJZIgARDns3/QZkzL
+      okHpoUDw+bz+IfDgAX7fBz8AHz6/B3h+hmmaJiIiYjuObBcgIiLZ4XrrwmioL5t1iIjILaY9
+      ABERm5pXARCJTGS7BBER25hXASAiC0cqlSIWi2W7DJmB671XERG7OXXqLC+9+CoOh4PKynLu
+      f+Ae3G73rB7jUu9lDh48ysd/86NzVKXcLO0BiMg1xsfHWVm7gkcf+zjxeIIjhxswTZPOzm6a
+      m45z5fLkl0auXO5jYGCQ5qYT9PcPAJBMJjl58gydnd1Tj3f16jCNjS2EQmMAdHf30Nt7maam
+      44yNjfPG66e40NF56zfU5hQAIvKuXE4n+fk+/P580mmTRCJJY2ML0YkJvv3txwmFxnj5lUM8
+      8dOn6O8f4Hvf/TcAvv2tx2k938bAwBAAodAY3/jn7zI+Ns7Xv/Yt4vE4v3jyWV599TBnTp/j
+      H//xm1zp6+e73/2BhoxuMQWAiLyrI0ca+PKXvsLly1eo370Tl8tJaWmQ3p7LAAxfHQbgngN3
+      c/8D95BMpohGo4RCY3zow4+wY8cWANpa29myZRN379/LsmXVdHf3AvDAAwe4447bWVW7kgMH
+      9rN0aTGJeCI7G2tTCgAReVf19Tt56OH7CIcjgMmZM+fp7u7lwx95hOUrat71PgYGyWQC0zR5
+      6xQDbo+bcCQCQDgcnfWxBJk7CgAReRcGANu3b2Hrts1861++T2FBgIsXOvned//tuuP1Xp+X
+      6poqvvrVr/PEE0+BAXV1a7jUe5mv/dO3MDGpqqqYbMGY1pRkgfHWuYDmwy+BI5EJ8vO92S5D
+      RK5jIjqB4TDweDzXXcc0TcLhCH5/Psabn/KmaTI+HiYQ8E8tk+zT10DllkokkuTl6WWXq7y+
+      9/4HLZlMEQj4py0zDIOCgsBclSU3SENAckuFQuFslyBzTH2cOxQAIiI2pQCYQ6Zp0tXVM/UD
+      mdlKpdJcunTZ4qpkLqVSqTe/NQOxWIxYLE4oNEYymcxyZfJ2fX0D9PUNkEqlMlq/p+fStOtv
+      fZX13Vy6dIWBgUHS6fRN1XgrKADm0MsvHWQiOkF3dy8jI6McOdIw4/rvnJsnlUrp15E5Jhqd
+      4OQbpwHo7blMb+8lotEo6XT6Pftfbp0jh19jcHCQn/3saUZHQ8Dk++9682O1tXVMu62trWPq
+      8jvvc+jgUa5c7uOnP3mSWCz+rutcz62en0tH4+aQaZqk0im2br2NeDzO2TOtpJIp1q1fy4UL
+      nYTHwzgcDtbWrebVV45QWFTAoqIi1tat5pWXD5Hvz8ej70znnImJGGNj40SiUfLzffT0XMLj
+      8Uzr/+LiJdku09YKCgrYsGEdq1at5PChBpYtr6a1tZ14LM7d++/kjTdOs3v3Lo4caWDXrh30
+      9w/wysuHCYfDPPjQvcDkFxqefeZ5vF4vy5ZXs2rVSgCWLFnMpts2UFZeysk3TuP25NHfN0g4
+      EuGee+6ipfl1Nm/ZyE9/8gv+6yd/g1deOYzP62U0FCI0OsbuPTspKyu9Jc+D9gDm0N379+Jw
+      OPnJfzzJxESM5StquHNvPcXFSwgE/Ljdbvr7J3cVN2ys48CB/YQjEV4/cZID9+7nzjvrs70J
+      cgP6+vo5f76N7u4eABKJBB6Pe1r/y/zgdrtJpSf3tO+77/3sf98+Tp86R/zNXyS/9TcYLOGu
+      u/dQtKiQiYnJ09Z3dnbhcDpYtKiIc+dar3lsvz+fWDxGf98g77/nLrZu2URPzyUikSitrR1U
+      VlUwMDCI251HIpFg37497LlzF8PDI7ds+xUAc6ivb4A1a2rZsnUTV670YRgGicTkryQvdHSy
+      c9cOfO/ytTq3283Y2DjxuM6LkouWLatm+/YtrF2zetryt/pf5oe3huVqa1fgcBhEoxMMDV0l
+      UBCYOmYTefMXzDC5Rz8yEpr6JbPf76e4eAmbbtvA7vpd0x47mUzy6qtHWbt2NalUimQyxdDQ
+      MIFAAF++j6HBq2zbtplf/OJZ1q6d/jq5lZxf/OIXvwgQi2X/q1sL7Tvi/f0DtLS8TjKZYvPm
+      jSxZvIgjRxooLCoiFotz8WInZWWlBIMluN1u8vPzAVizdhXNzScYGBikuqaKoqLCLG+JdaLR
+      2IL/sZ/T6aSwsAAM8Pm8+Hw+CgsLWVq8eLL/CwvJz/dlu8w5kwt93N8/QEdHJ8uXV7NsWQ1l
+      ZUEaXmsiGp1gy5ZNmKZJc/MJCgoCVFdXcfXqMK2tHdTVrWHRoiIMw6C6upKBgSHa2zoIBPwU
+      vvk+7erqobfnEhs3rqOkZClLly7htdca8XjcrFmzisLCAhxOJ1VVFcRj8amho6KiQgzDgdvt
+      xu/PvyXPg34JLLfU0NAoxcVF2S5D5pD6OHdoCEhExKbm1XhLOp3WvMALXCKRVB8vcOrj3DGv
+      AsDhcGgIaIHLhfFhuTnq49yhISAREZtSAIiI2JQCQETEphQAIiI2pQAQEbEpBYCIiE0pAERE
+      bEoBICJiUwoAERGbUgCIiNiUAkBExKYUACIiNqUAEBGxKQWAiIhNKQBERGxKASAiYlOWB0A6
+      neYHP/gRoyOjtLV18NJLB/nFk88wPh7muede4ujRY6TTaRpea7K6aRERmQXLZwQ7dqyZmpoq
+      Uuk0y5fXsGrVSpqajnPp0mUqK8sZGR7l1KmzrFm7auo+huF821/tlCxsBurjhU59nCss7aWh
+      oasYhkFBQQHpVBqn08mhg0fJc7lYvbqWq0PDOJwORkdHaWxs4eiRY1Y2LyIis2DpHkA8nsDA
+      oKP9AtFIlIsXu6hZVk11dSUAe+68g0MHj1JaWkpBgZ+O9osAmGbqbX/TVpYk846J+nihUx/n
+      CksDoLy8lPLyUpb1V1NQEODihS66unro6uph48Z1eL0eli+voay8lGMNzSxbVm1l8yIiMguG
+      aZomwGioL9u1EIlMkJ/vzXYZMoeGhkYpLi7Kdhkyh9THuUNHakREbEoBICJiUwoAERGbUgCI
+      iNiUAkBExKYUACIiNqUAEBGxKQWAiIhNKQBERGxKASAiYlMKABERm1IAiIjYlAJARMSmFAAi
+      IjalABARsSkFgIiITSkARERsSgEgImJTcxIAHR0XicXipNNpWppfp7f3EgCtre309fUDcOVK
+      /1w0LSIiGbI8APr7Bzh8uIFwOMyxhmYqq8o5e7aVgYFBxkLjnDvXxtDQVQYHh6xuWkREZsFl
+      5YOZpsmJEyfZsmUjALF4nGCwhNWraxkaukooNIaJSWtrBwZwqfcyFZXlOBxuABxGCoM8K0uS
+      ecbAqT5e4NTHucPSADh9+hzJRJLz59oZC42TTqcBiMViFAQClG4J0t3VQywWp6q6ko6Oi1RU
+      lpNOxwFImwlMnFaWJPOMSQqTRLbLkDmkPs4dlgbAhg11bNhQx8mTZ6ioKGNkZJQXX3iV8fFx
+      Hnr4PhKJBOPhMHV1a2hpeZ38fJ+VzYuIyCwYpmmaAKOhvjlpIBaLk5fnwuFw8GZTGIZBMpHE
+      6XJiGMbUupHIBPn53jmpQ+aHoaFRiouLsl2GzCH1ce6wdA/g3Xg87qnLb/+wd+XNedMiIjID
+      /Q5ARMSmFAAiIjalABARsSkFgIiITSkARERsSgEgImJTCgAREZtSAIiI2JQCQETEphQAIiI2
+      pQAQEbEpBYCIiE0pAEREbEoBICJiUwoAERGbUgCIiNiUAkBExKYsDYBUKsWpk2doajpOLBYn
+      Ho/T1HScjo6LALS2ttPX1w/AlSv9VjYtIiKzZOm8jPF4gpLgUrxeL0eONACwffsWTr5xGpfL
+      xVhonMuX+3C5XAwODlFWFrSyeRERmQVLA8Dn89LZ2cX58+3cvmMrkWiUl186SDweZ9NtG+ho
+      v4iJSWtrBwZwqfcyFZXlOByT8wY7jBQGeVaWJPOMgVN9vMCpj3OH5TOzr15dS0EgQHvHRZLJ
+      JPfe9z5aWzsYHR1l85aNdHf1EIvFqaqupKPjIhWV5aTTcQDSZgITp9UlyTxiksIkke0yZA6p
+      j3OHpccA+vsHOHK4ge7uXrweD35/Pk1NJ7h4sQu/309+vo/xcJjaVSs4ffosDodhZfMiIjIL
+      hmmaJsBoqM+SB0wmk6TTadzuyWGdeCyOK8+Fw+HgzaYwDINkIonT5cQwfhUCkcgE+fleS+qQ
+      +WloaJTi4qJslyFzSH2cOywfAnK5pj+k2+Oeuvz2D3tXnuVNi4jILOh3ACIiNqUAEBGxKQWA
+      iIhNKQBERGxKASAiYlMKABERm1IAiIjYlAJARMSmFAAiIjalABARsSmdj0Ekx5w9c46f/ORn
+      OJwO/uRP/gjDMBgaGuJ73/sBAJtv20RFZTk/e+IXLFpUxKc+/Rh/9Vd/R15eHpUV5ezeXc/f
+      /f0/8Oijn2DTpg1Z3hrJJstPBnczdDK4hU8nCrt5f/e3/48v/Lc/4JlnfsnyZcuoW7d26rb2
+      9g5eefkgY2NjfOzj/4WA348v30cikSCdTvPVv/9HHn3sE7S3X8DjzmP7jm2W16c+zh0aAhLJ
+      MS6XC8MwCAZLuDo8PLX8qaf+k7/9m6+yZcttdPf0cvDgYb785f/L6OgoXV3d/Pn/+Qs+9elH
+      KS0N4nJp3g3REJBIznE6nQwPj3C85XUeevgBRkZGAIN77nkf999/L3/5l39LVWUF9913AMMw
+      GBgY4lv/8h2+/L/+DKdTH/zyKwoAkRzzyUd/k29/619ZvqKG0tIgzz7zHFu23sbjj/8QgI99
+      7NcpLCzk29/+HsFgCeXlpZSVlfLNb36b8vJySkuDHD/+Opgmi5csZuXKFVneIskWHQOQW0rj
+      wwuf+jh36BiAiIhNaQhIJIuS59pInm/Ldhmz5n3k/myXIBawNADC4TANDc0YQEVlOWVlpbx2
+      tBG3x019/e288sphAgE/O3dup/FYCzt3bbeyeZGckzzfRuznz2S7jFlTACwMlgaA3+9n//69
+      DA4O0dbaQX//ALvu2EFeXh7hcITKynJGhkc5deosa9aumrqfYTjf9lejUgubgfr47Yz3XmVe
+      mqkP1ce5wvJeOnXqLC++8CqVVRWMj4Vpa+vg5ZcPkkgkuTo0jMPpYHR0lMbGFo4eOWZ18yIi
+      kiFL9wCi0Shr165m3bo1vPD8KxQtKmLVqpUsXVpMaDTEnjvv4NDBo5SWllJQ4Kej/SIAppl6
+      29+0lSXJvGOiPn47M9sF3KCZ+lB9nCssDYBkMkVjYwOYJtu2b6agoICGhiacTie7dm0nFoux
+      fHkNZeWlHGtoZtmyaiubFxGRWbA0AAoKAuzdWz9t2Z49u6YuezweKqsqALij/nYrmxYRkVnS
+      kRoREZtSAIiI2JQCQETEphQAIiI2pQAQEbEpBYCIiE0pAEREbEoBICJiUwoAERGbUgCIiNiU
+      AkBExKYUACIiNqUAEBGxKQWAiIhNKQBERGxKASAiYlMKABERm1IAiIjYlKUBkEqlOHXyDE1N
+      x4nF4gAkk0laW9sBaG1tp6+vH4ArV/qtbFpERGbJ0gCIxxOUBJeyenUtR440APDaa020tV1g
+      fDzMWGicc+faGBq6yuDgkJVNi4jILFk6KbzP56Wzs4vz59u5fcdWrlzpoyDgJ51K4XI5CYXG
+      MDFpbe3AAC71XqaishyHww2Aw0hhkGdlSTLPGDjVx29j4Mx2CTdkpj5UH+cOSwMAYPXqWgoC
+      Ado7LjI4MEhpWSkXO7upXbWSzVs20t3VQywWp6q6ko6Oi1RUlpNOTw4Xpc0EZo6+ISQzJilM
+      EtkuY94wSWW7hBsyUx+qj3OHpQHQ3z/A+XNtuFwuvB4PH/zQwwAkEwkqKsqIxWKMh8PU1a2h
+      peV18vN9VjYvIiKzYGkABIMlLFmymHQ6jdvtnlq+d99uANxuN/X1OzEMg7v27cHp0n/7IiLZ
+      YvkQkMt1/Yc0DONX6+VZ3rSIiMyCfgcgImJTCgAREZtSAIiI2JQCQETEphQAIiI2pQAQEbEp
+      BYCIiE0pAEREbEoBICJiUwoAERGbUgCIiNiUAkBExKYUACIiNqUAEBGxKQWAiIhNKQBERGxK
+      ASAiYlOWTssVjU7Q0NCEaZps2FAHwOlTZzFN2LuvnsZjLRQWFbBu3VrOnj1PXd0aK5sXEZFZ
+      sHQPwO3OY+/eevbs2cXJk2cwDIN9d+2htKyEc2dbKSgMMDw8yoULnQQCASubFhGRWbJ0D8Dp
+      dHLq1FkaXmvkA7/2IMXFS+jouEhv72XuumsPLzz/Cr58H5cuXSYeTxAKhVi/vg6HY3ICeYeR
+      wiDPypJknjFwqo/fxsCZ7RJuyEx9qD7OHZbPzL5hQx1r167i5ZcPsXx5DUNDV7nnnrsBuO/+
+      99PUdByP201pWSltbe0ApNPxyb9mAjNH3xCSGZMUJolslzFvmKSyXcINmakP1ce5w9IA6O8f
+      4PTpczgMg2XLqrlypQ8wOHToNTZuXIfX68Hr8bCydjlHjxwjWFpiZfMiIjILlgZAMFhCMPir
+      D/VVq1Zes86GjesA2P++fVY2LSIis6SvgYqI2JQCQETEphQAIiI2pQAQEbEpBYCIiE0pAERE
+      bEoBICJiUwoAERGbUgCIiNiUAkBExKYUACIiNqUAEBGxKQWAiIhNKQBERGxKASAiYlMKABER
+      m1IAiIjYlAJARMSmLA+AcDjC8PDI1PWRkVHi8clJ3yORCInE5GTRsVjM6qZFRGQWLJ0TOBwO
+      c/LkWTzuPFpb2yksLGB0JET/wCDvf/9dHD7UgNPpoH73LlpaTlBfv9PK5kVEZBYsDQC/38+a
+      NbVcuNBJQUEBfVf6uevuO2lvv8DFi52UBJcyNjbOyZOnCQZLiEai+PJ9OBxuABxGCoM8K0uS
+      ecbAqT5+GwNntku4ITP1ofo4d1gaAADRSJREIoE7Lw/DYUw24nThyncxPj6Oz+slFo8RiURp
+      bGxh777dpNOTQ0RpM4GZo28IyYxJCpNEtsuYN0xS2S7hhszUh+rj3GHpMYDBwSGSqRTLl9cw
+      MDCE3++no+MiZ86ep6y8lPUb6ghHItTUVON06PiziEg2WboHsGTJYkZHQ0QiEfbuq8fpdNLa
+      2s7tt2/F43ETi8XZtm0zgYCfC/E423dssbJ5ERGZBUsDwOFwUFu7YtqyNWtWTV32eNx4PJPj
+      /StWLreyaRERmSWNw4iI2JQCQETEphQAIiI2pQAQEbEpBYCIiE0pAEREbEoBICJiUwoAERGb
+      UgCIiNiUAkBExKYUACIiNqUAEBGxKQWAiIhNKQBERGxKASAiYlMKABERm1IAiIjYlOUBkEgk
+      uHp1eOr68PAIExMxACKRCInE5GTRsVjM6qZFRGQWLJ0Scnw8zLFjzSxaVMT5c204nA48bje9
+      ly6za9cOWppfx+l0UL97Fy0tJ6iv32ll8yIiMguWBkAg4Gf//r10dfXQ3z+A2+3GNE3ceW6S
+      yRQlwaWMjY1z8uRpgsESopEovnwfDsfkPMEOI4VBnpUlyTxj4FQfv42BM9sl3JCZ+lB9nDss
+      DQCAhoZmXE4HO3ZspfFYC4sWFxHyenC783A5nfi8XmLxGJFIlMbGFvbu2006HQcgbSYwc/QN
+      IZkxSWGSyHYZ84ZJKtsl3JCZ+lB9nDssPQYwPDzCwMAgFZXljI6GCIXGKCgI4HQ6iEYnWL+h
+      jnAkQk1NNU6Hjj+LiGSTpZ/CXq+XurrVhMMRYrEYd929h+HhEVasWE5FRRnxeIJt2zZTVVWB
+      z+dl+44tVjYvIiKzYOkQkM/npbZ2xbRldXVrpi57PG48nsnx/hUrl1vZtIiIzJLGYUREbEoB
+      ICJiUwoAERGbUgCIiNiUAkBExKYUACIiNqUAEBGxKQWAiIhNKQBERGxKASAiYlMKABERm1IA
+      iIjYlAJARMSmFAAiIjalABARsSkFgIiITSkARERsSgEgImJTlk4JmUwmOdbQTDQaZf2GdSxd
+      uoSjRxtJpVLs2bOLpsbjFBYVsG7dWs6ePT9tukgRWfjCEwm6+sezXcas1QQD+L152S7DcpYG
+      QCKRZNNt6/H7/bz44qv4/X4237aBgsICRkZGKSgMMDw8yoULnQQCASubFpEc0NU/zp8/fjzb
+      Zczan/7mFtbVLM52GZazfFL4SCTC008/x65d2znW0MyJ108RCo2xZ88uurt68eX7uHTpMvF4
+      glAoxPr1dTgckxPFO4wUBgsvZeVXDJzq47cxcGa7hBsyUx/O1MeGtR85t4yBa0G+bi0fAvrl
+      sy/ywIMHcLvd5PvzueOOHQwOXuXypSvcd//7aWo6jsftprSslLa2dgDS6fjkXzOBmaNvCMmM
+      SQqTRLbLmDdMUtku4YbM1Icz9bFJcq5KmlMmyQX5urU0AK5eHSbP7ebYsRaCwaVs3ryRF198
+      FQODvfvqicVieD0eVtYu5+iRYwRLS6xsXkREZsHSAAgGS3jwwQPTlh04sH/a9Q0b1wGw/337
+      rGxaRERmSV8DFRGxKQWAiIhNKQBERGxKASAiYlMKABERm1IAiIjYlAJARMSmFAAiIjalABAR
+      sSkFgIiITSkARERsSgEgImJTCgAREZtSAIiI2JQCQETEphQAIiI2pQAQEbEpBYCIiE3NOgBM
+      05zx9kQiwdWrw9OWhcMRACKRCInE5MTKsVhstk2LiIiFMpoTuK+vn5//7CkSiQQOh4N0Ok1l
+      VQUPPXQ/Tqdzar3x8TDHjjWzaFER58+1cUf97Zx84zTnzrXy8CP3c/hQA06ng/rdu2hpOUF9
+      /c452zAREZlZRgFw9ux5HvutT5CXlze1rLf3EufPtbJufd3UskDAz/79e+nq6qG/f4BwOMLI
+      aIhgsIR4LE5JcCljY+OcPHmaYLCEaCSKL9+Hw+EGwGGkMMi7pn1ZOAyc6uO3MXC+90rz0Ex9
+      OFMfG5l95Mw7Bq4F+brNqDf27duDYRi0tLzOyTdOMTExwaOPfYLKyopr1m1oaMbldLBjx1Z+
+      9sRTrFq9krNnzpNIJnE5nfi8XmLxGJFIlMbGFvbu2006HQcgbSYwc/QNIZkxSWGSyHYZ84ZJ
+      Ktsl3JCZ+nCmPjZJzlVJc8okuSBftxkdAxgYGOQ//uNnDA0N4fG4SSQSpNPXvnCHh0cYGBik
+      orKc0dEQ++7aQ2lpkHy/H5/Px/oNdYQjEWpqqnE6dPxZRCSbMtoDCAZLeOCBAzQ0NFFRWc5H
+      PvrBaWP/b/F6vdTVrSYcjuBwOAgGSwC4444d+HxeYrE427ZtJhDwcyEeZ/uOLdZujYiIZCyj
+      AOjs7OL551/GMGDrls386Ec/5UMfegS32z1tPZ/PS23timvuv2hREQAejxuPZ/I+K1Yuv8nS
+      RUTkZmQUAF6vFzOdxgTKK8rYsvW29/w6qIiIzG8ZBcDp02f55KMfn/Yff09PL2Nj46x/27eA
+      REQkd2QUAJs2beBfv/dvxONxMAxM06SmppoHHjgw1/WJiMgcySgAli4t5lOffnSuaxERkVso
+      N3+VYRNHug5zpOtItsuYtT+684+zXYKIZCDjAIjFYnzzG9/BNKG0tIQPfugRXK5bmx/nB8/d
+      0vasUJxfTHH+0hu671BkiNbB8xZXJCIyKeNP8N7eS6xfX8fIaIhIOEw4HKGoqHAua7vG3xz8
+      61vanhUeqnuYh+seyXYZIiLXyPjnuCtWLKd/YJDTp8+Q53bf8g9/ERGxVsYB8NaZQFevXgVA
+      w2uNc1aUiIjMvYwDIBQaw0yn2bt3N8PDI7S1tdPT0zuXtYmIyBzK+BhAfn4+ra3tlJWVMjI8
+      wprVtSQSuXlmPxERmVUA+Pi93/8MHR0X+MPP/y6pVJpAwD+XtYmIyBzKOAAmJib42j99k9HR
+      EGDypS//TwzDmMPSRERkLmUcAIODV9mxYyvj42EMh8H4+DiLFy+ay9pERGQOZXwQuKKijLKy
+      MhYtXsSVy30UFATmsi4REZljGe8BjI2NE46EufvuveTluYhGJxQCIiI5LKMAME2Tr3/tX7jS
+      18exhiZGRka5/fbtc12biIjMoYwCwDAM/uAPP0tPzyXWrFk147qJRIKxsXGWLFkMTO45OJ0O
+      8vPziUQi5OXlkZeXRywWw+Px3PwWiIjIDZnFyeDifP9ff8jSpUsA+Nzv/Q55eXnT1hkfD3Ps
+      WDOLFhVx/lwbixYXMT4eZqB/kG3bNvPGG6dxOh3U795FS8sJ6ut3Wrs1IiKSsYwDwDBg27bN
+      /NoHH77uOoGAn/3799LV1UN//wB1dWswTZPnn3+ZZCpFSXApY2PjnDx5mmCwhGgkii/fh8Mx
+      OdOYw0hhkHfdx89FBs4b3iYDp8XV3Bozbe/NPB8Lkd362MjRM9AbuBbk6zbj3nC58jjf2s5X
+      v/pPAHzuc5++Zg8AoKGhGZfTwY4dW4nF4vzy2RfYuWs7wWAJI8Mj+LxeYvEYkUiUxsYW9u7b
+      TTodByBtJjBz9A1xPSYpTBI3fN9cNNP23szzsRDZrY9NcvPsASbJBfm6zfhroIGAn7vvvpO6
+      ujXs27fnXT/8h4dHGBgYpKKynNHREIcOHmXd+rWk02ni8TjrN9QRjkSoqanG6ci4aRERmQMZ
+      fwr39PTS2dlNKDRGR/uFN38RPJ3X66WubjXhcIRYLMbGTesBCIcjpFIp4vEE27ZtpqqqAp/P
+      y/YdW6zbEhERmZWMh4CKigrp7eklEomSSqd45AMPXrOOz+eltnbFtGXB4PTZsDyeyfH+FSuX
+      30C5IiJilYwDwO/388EPPfLmvADOWz4dpMj1/PznT9HW1s6v//qHqaqqBKC5uYVDB4/g8Xr5
+      zGd+m+bm41y82MlHPvJBrl4d5rvf+T7l5WX8xsc+CsDjj/+Q22/fPjXfhYgdZDwE1N3dw/lz
+      baxaVUtL83FGRkbnsi6RjITDEbo6u/j853+Pf//3H08tLyoq4vNf+H0chsHg4Ip8kpkAAAk6
+      SURBVBD9/QP09/UD8IPHf8hnPvspUqkUvb2XOHnyFBcuXOTKlb5sbYZIVsziXEDlHD/+Ot/8
+      xnfo7umlsFBTQkr29fX1sWLlClwuF263e2p5be1KnnzyadKmSUnJUh544N7J7zK/ye/Pp27d
+      WtrbO3jqF8/wyCMPZaN8kayaxemgY9xzYD+ralcSKAjoVNAyLxQXF3Pl8hVg8lfob/nxj39K
+      IBDgs5/91DX3SaVSpFIpenp6MU0Tl8vJE0/8nGQiyd69e25Z7SLZlnEA+HxeXnjhZYqKiohE
+      owSDJQoBybqiokJM4C++8jfcd/89HD58lOrqKjovdhEo8PP1r3+T++47wIsvvEx3dw/PPvsc
+      H/i1h/nKV/6agN/P57/w+wC0t18gHA5nd2NEbrGMAyAeT1BTXUVTYzMAH/rwB3QgWOaFT3/6
+      sWuW/dEff2Ha9d/67U9Ou/6nf/rfp11/57fXROwg42MAPp+XtGmSTKYoXlqMQz/kEhHJaRn/
+      C9/RcYHS0iAjI6OMjIwyOhrSjGBiueS5tmyXMGuO4iU43jxJokguyTgAqqureeaZ57nQcYGq
+      qkoWLSqay7rEpsJ/9Q/ZLmHWPI/ch/eR+7NdhsisZRwALc3Hqays4Hd+57FpX7cTEZHclNFA
+      fn//AMdPvEFNdRVPPvmfc12TiIjcAhkFwMDAIIWFBfjyfZw7e56zZ8+TTqfnujYREZlDGQVA
+      RUU5hYUFtLd3cNvmjbS3d2Ca5lzXJiIicyijYwCLFy/ioYd0kEtEZCHJ+CCwaZqcOXOOaDQK
+      wNatm/VbABGRHDaLCWEu8cx/PsfERIyJiZiGgEREclzGewDFxYsxDPB6PG8u0XmARERyWcYB
+      4HS62LXrduLx+JtLtAcgIpLLMgqAM2fOEY/HOXaseWrZjtu34XQ6p62XTCY51tBMNBpl/YZ1
+      FBYEeK2hiaLCArZu20zDa00UFhWwbt1azp49T13dGmu3RkREMpZRAKxcuRww2Lx504zrJRJJ
+      Nt22Hr/fz4svvorL5WLPnl28fuIUnZ3dFBQGGB4e5cKFTgKBgAXli4jIjcooAMbGxvn3H/6Y
+      VDpNfr6Purq11NfvvOZbQD6fl0gkwtNPP8euXds5deosbreb0rIgE9EJurt68eX7uHTpMvF4
+      glAoxPr1dTgck6eWcBgpDPKs38osMnDe8DYZON97pXlopu29medjvlIfv/O26z8fRuajzvOK
+      gWvBvW4hwwBYurSYRx/7BGfPnOPU6TM8/fSz7Ny5/ZoASCaT/PLZF3ngwQO43W7S6TTpdJqR
+      kVHKykq57/7309R0HI/bTWlZKW1t7QCk05PHFdJmAjNH3xDXY5LCJPHeK17nvrlopu29medj
+      vlIfv/O26z8fJsm5KmlOmSQX3OsWMgyAjo6LfPHP/jcPP/IAH/3oB/H7/e+63tWrw+S53Rw7
+      1kIwuJTbNm3guedewuP2sGnTemKxGF6Ph5W1yzl65BjB0hJLN0ZERDKX8TGAf/7GP3D+fCs/
+      /tETnDlzji996X+Q556+SxQMlvDggwemLbv33vdNXfZ4PGzYuA6A/e/bd7O1i4jITcgoAAYH
+      h3j8+z8kmUwSKCjgoYfvx+laWEM1IiJ2k1EAFBQE+N3PfRrP1I/AREQk12UUAPrgFxFZeHQ2
+      NxERm1IAiIjYlAJARMSmFAAiIjalABARsSkFgIiITSkARERsSgEgImJTCgAREZtSAIiI2JQC
+      QETEphQAIiI2pQAQEbEpBYCIiE0pAEREbGpOAiAWi01dHh4eYWJi8nokEiGRSFyzjoiI3HqW
+      BkAqleLZZ17gpRcPAtDQ0ERXZzcvvPAyQ0NXOXyogYOvHmFiIkZz8wkrmxYRkVnKaEawTDkc
+      Dg7cu59DB48C4PV6MU0Td56bZDJFSXApY2PjnDx5mmCwhGgkii/fh8Phnry/kcIgb6Ymco6B
+      84a3ySA3512eaXtv5vmYr9TH77zt+s+HYe1Hzi1j4Fpwr1uwOAAMw5h2PR6Ls2hxESGvB7c7
+      D5fTic/rJRaPEYlEaWxsYe++3aTTcQDSZgIzR98Q12OSwiRxw/fNRTNt7808H/OV+vidt13/
+      +TBJzlVJc8okueBet2DxEFAymWRgYJCx8TAjI6OEQmMUFARwOh1EoxOs31BHOBKhpqYap0PH
+      n0VEssniYwBpQqEx1qypJRqJctfdexgeHmHFiuVUVJQRjyfYtm0zVVUV+Hxetu/YYmXzIiIy
+      C5YOAXk8bmprV0xbVle3ZtrtHs/keP+KlcutbFpERGZJ4zAiIjalABARsSkFgIiITSkARERs
+      SgEgImJTCgAREZtSAIiI2JQCQETEphQAIiI2pQAQEbEpBYCIiE0pAEREbEoBICJiUwoAERGb
+      UgCIiNiUAkBExKYUACIiNjUnARCLxaYuRyIRhodHpi4nEolr1hERkVvP4jmBUzz7zAu89OJB
+      AHp7L3PsWAvd3b1EIhEOH2rg4KtHmJiI0dx8wsqmRURkliydE9jhcHDg3v0cOngUgHPnWgmW
+      LMXt8ZBKpigJLmVsbJyTJ08TDJYQjUTx5ftwOCbnCXYYKQzyrCwp6wycN7xNBk6Lq7k1Ztre
+      m3k+5iv18Ttvu/7zYVj7kXPLGLgW3OsWLA4AwzCmXU+lUlRVV3LxYhdDV4dxOZ34vF5i8RiR
+      SJTGxhb27ttNOh0HIG0mMHP0DXE9JilMEjd831w00/bezPMxX6mP33nb9Z8Pk+RclTSnTJIL
+      7nULFg8BJZNJBgYGGRsPMzIySmlpkL6+flKpFG53Hus31BGORKipqcbp0PFnEZFssvgYQJpQ
+      aIw1a2qJRqLcdtsG3HluSkqWUlFRTjyeYNu2zVRVVeDzedm+Y4uVzYuIyCxYOgTk8biprV0x
+      bdmKlcum3e7xuN9cvtzKpkVEZJY0DiMiYlMKABERm1IAiIjYlAJARMSmFAAiIjalABARsSkF
+      gIiITSkARERsSgEgImJTCgAREZtSAIiI2JQCQETEphQAIiI2pQAQEbEpBYCIiE0pAEREbEoB
+      ICJiUwoAERGbsjwAurt6OH78janrY2PjvPrqEUzT5LWjjZw5cw6As2fPW920iIjMgqVzAqdS
+      KcbGxxkbG59a1tDQhNPhZHQ0REFhgOHhUS5c6CQQCFjZtIiIzNL/B+6XqPtRB8z1AAAAAElF
+      TkSuQmCC
+    </thumbnail>
     <thumbnail height='384' name='Action Matrix' width='384'>
       iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
       AAAgAElEQVR4nOzdd3xc1Znw8d+9d6p6l1xky3KvuBtXwPRAEnAIKbAJLZRNlrBvFjYbNsTZ
@@ -2473,6 +4245,170 @@
       kigmACIiiWICICKSKCYAIiKJYgIgIpIoJgAiIoliAiAikigmACIiiWICICKSKCYAIiKJYgIg
       IpIoJgAiIoliAiAikigmACIiiWICICKSKCYAIiKJYgIgIpIoJgAiIoliAiAikigmACIiiWIC
       ICKSKCYAIiKJ+l9M/Sak+0aZtQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='384' name='Dealer Up Card Value' width='384'>
+      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
+      NAIAAMzM/weOksu7F692XQAAAABJRU5ErkJggg==
     </thumbnail>
     <thumbnail height='384' name='Impact of Bet' width='384'>
       iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
@@ -3650,6 +5586,295 @@
       iIgExQAgIhIUA4CISFAMACIiQTEAiIgExQAgIhIUA4CISFAMACIiQTEAiIgExQAgIhIUA4CI
       SFAMACIiQTEAiIgExQAgIhIUA4CISFAMACIiQTEAiIgExQAgIhIUA4CISFAMACIiQTEAiIgE
       xQAgIhIUA4CISFAMACIiQTEAiIgExQAgIhIUA4CISFD/D3Ns5+G4XBKRAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='384' name='Player Hand Values' width='384'>
+      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
+      F6eA3Of/AoaQAqtq9CMUAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='384' name='Sheet 6' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
 </workbook>
